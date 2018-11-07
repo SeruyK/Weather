@@ -1,0 +1,16 @@
+<div class="container">
+
+  <!--<button type="button" id="LoadWeather" class="btn btn-primary" > Load Weather </button>-->
+  <button type="button" id="FilterWeather" class="btn btn-info"> Filter Weather </button>
+  <div *ngIf="weatherForm">
+    <app-weather-form ></app-weather-form>
+  </div>
+
+  <table class="table table-striped" >
+    <app-weather-table
+      [weather]="w"
+      *ngFor="let w of ( weatherState | async ).showWeathers"
+    ></app-weather-table>
+  </table>
+  <div id="chart"></div>
+</div>

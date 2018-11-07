@@ -1,0 +1,31 @@
+<div>
+  <div>
+    <label>temp</label><ion-range-slider #sliderElement
+                                         type="double"
+                                         [min]="MinTemp"
+                                         [max]="MaxTemp"
+                                         [(from)]="fromTemp"
+                                         [to]="toTemp"
+                                         postfix="°C"
+                                         (onChange)="myOnChangeTemp($event)">
+  </ion-range-slider>
+    <label>wind</label> <ion-range-slider #sliderElement2
+                                          type="double"
+                                          [min]="MinWind"
+                                          [max]="MaxWind"
+                                          [from]="fromWind"
+                                          [to]="toWind"
+                                          postfix="ms"
+                                          (onChange)="myOnChangeWind($event)">
+  </ion-range-slider>
+
+    <select class="custom-select" [(ngModel)]="weathSelect" (change)="onChangeWeath()"  id="inputGroupSelect05" aria-label="Example select with button addon">
+      <option *ngFor="let c of clouds" value="{{c}}">{{c}}</option>
+    </select>
+  </div>
+<button type="button" id="FindWeather" class="btn btn-info" > Find Weather </button>
+  <div *ngIf="LoadAllWeather">
+    <button type="button" id="LoadWeather" (click)="onLoad()" class="btn btn-primary" > Load All Weather </button>
+  </div>
+</div>
+

@@ -1,0 +1,45 @@
+{
+  "Weathers": [
+    {
+      "id": 1,
+      "dt_txt": "01,04,2018",
+      "temp": 27,
+      "clouds": "clodse",
+      "wind": 7
+    },
+    {
+      "id": 2,
+      "dt_txt": "02,04,2018",
+      "temp": 26,
+      "clouds": "reny",
+      "wind": 2
+    },
+    {
+      "id": 3,
+      "dt_txt": "03,04,2018",
+      "temp": 25,
+      "clouds": "clodse",
+      "wind": 1
+    },
+    [
+      {
+        "dt_txt": "12,10,2018",
+        "temp": 15,
+        "clods": "clods",
+        "wind": 5
+      },
+      {
+        "dt_txt": "13,10,2018",
+        "temp": 18,
+        "clods": "clods",
+        "wind": 2
+      },
+      {
+        "dt_txt": "14,10,2018",
+        "temp": 25,
+        "clods": "sun",
+        "wind": 1
+      }
+    ]
+  ]
+}
