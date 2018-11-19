@@ -1,4 +1,13 @@
 <tr><td style="background: gainsboro"> <b> {{weather.dt_txt.substr(8,2)}}</b>D {{weather.dt_txt.substr(11,2)}}h </td> </tr>
 <tr><td style="background: yellow">{{weather.temp}}°C</td></tr>
 <tr><td style="background: deepskyblue">{{weather.wind}}ms</td></tr>
-<tr><td style="background: white">{{weather.clouds}}</td></tr>
+<!--<tr><td style="background: white">{{weather.clouds}}</td></tr>-->
+<!--<tr><td style="background: white"><img src="../../assets/img/Clouds.jpg" alt="Clouds"></td></tr>-->
+
+<tr><td [ngSwitch]="weather.clouds">
+<img *ngSwitchCase="'Clouds'" src="../../assets/img/Clouds.jpg" alt="Clouds">
+<img *ngSwitchCase="'Clear'" src="../../assets/img/Clear.jpg" alt="Clear">
+<img *ngSwitchCase="'Snow'" src="../../assets/img/Snow.jpg" alt="Snow">
+  <img *ngSwitchCase="'Rain'" src="../../assets/img/Rain.jpg" alt="Rain">
+  <img *ngSwitchDefault src="../../assets/img/another.jpg" alt="another">
+</td></tr>

@@ -1,16 +1,26 @@
 <div class="container">
-
+<div id="myTitl" class="row"><h1>WEATHER</h1></div>
+  <div class="row" style="height:70%">
   <!--<button type="button" id="LoadWeather" class="btn btn-primary" > Load Weather </button>-->
-  <button type="button" id="FilterWeather" class="btn btn-info"> Filter Weather </button>
+    <div class="col-md-2"style="height:100%">
+    <button type="button" id="FilterWeather" class="btn btn-info"> Filter Weather </button>
   <div *ngIf="weatherForm">
     <app-weather-form ></app-weather-form>
   </div>
+    </div>
 
-  <table class="table table-striped" >
-    <app-weather-table
+        <div class="col-md-10"style="height:100%">
+  <table class="table table-striped"  >
+    <app-weather-table style="border: double blue"
       [weather]="w"
       *ngFor="let w of ( weatherState | async ).showWeathers"
     ></app-weather-table>
   </table>
+        </div>
+
+
+        <div class="col-md-12"style="height:15%;">
   <div id="chart"></div>
-</div>
+        </div>
+
+  </div></div>

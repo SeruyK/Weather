@@ -28,8 +28,8 @@ ngOnInit() {
       data: {
         columns: [
           ['wind', 0].concat((a.weatherPage.showWeathers.map(p => p.wind))),
-          ['temp', 0].concat((a.weatherPage.showWeathers.map(p => p.temp)))
-        ]
+        ['temp', 0].concat((a.weatherPage.showWeathers.map(p => p.temp)))
+  ]
       }
     });
   });
